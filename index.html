@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+   
+</head>
+<body style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <div style="width:35%; height: 450px; background-image: linear-gradient(to top,rgb(207, 200, 5),rgb(244, 236, 30)); display: flex; align-items: center; justify-content: center;">
+        <div style="border: 5px solid black; width: 85%; height: 90%; background-image: linear-gradient(to top,rgb(233, 233, 233),rgb(255, 255, 255)); display: flex; align-items: center; justify-content: center; flex-direction: column;">
+            <h2>Counter</h3>
+            <h1 id="number">0</h1>
+            <div style="width: 50%; display: flex; justify-content: space-between; align-items: center;">
+                <button style="cursor: pointer; width: 100px; height: 45px; border-radius: 5px; font-size: 18px;" id="increase">Increase</button>
+                <button style="cursor: pointer; width: 100px; height: 45px; border-radius: 5px; font-size: 18px;" id="decrease">Decrease</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let number = document.getElementById('number')
+        let count = 0
+        
+
+        document.getElementById('increase').addEventListener('click',()=>{
+            count++
+            number.innerText = count
+        })
+
+        document.getElementById('decrease').addEventListener('click',()=>{
+            count--
+            number.innerHTML = count
+        })
+    </script>
+</body>
+</html>
